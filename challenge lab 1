@@ -1,0 +1,34 @@
+Foundation Infrastructure task
+Task 1: Creating bucket
+Navigation menu > Storage > Create Bucket
+Name your bucket(unique) > Enter GCP Project ID > Continue
+Choose where to store your data > Region: us-east1 > Continue
+Use default for rest
+Created
+
+Task 2: Creating a Pub/Sub topic
+Navigation menu > BIG DATA > Pub/Sub
+Create Topic > Name: name > Create Topic
+Task 3: Create the thumbnail Cloud Function
+Navigation menu > COMPUTE > Cloud Functions > Create Function
+
+Use the following config:
+
+Name: CFname Region: us-east1 Trigger: Cloud Storage Event type: Finalize/Create Bucket: BROWSE > Select the qwiklabs bucket
+
+Remaining default > Next
+
+Runtime: Node.js 10 Entry point: thumbnail
+
+Add the code 
+
+Download image from URL
+
+Navigation menu > STORAGE > Storage > Select your bucket > Upload files
+
+Refresh bucket
+
+Task 4: Remove the previous cloud engineer
+Navigation menu > IAM & Admin
+
+Search for the "Username 2" > Edit > Delete Role
